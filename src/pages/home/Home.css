@@ -1,0 +1,99 @@
+/* * movie-container */
+.movie-container {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 2rem;
+}
+
+.movie-container .movieBox {
+	width: 30rem;
+	background-color: transparent;
+	backdrop-filter: blur(15px);
+	border: 2px solid var(--color_yellow);
+	border-radius: 1rem;
+	padding: 2rem 1rem;
+	text-align: center;
+	position: relative;
+	overflow: clip;
+}
+
+/* * Movie-Titel */
+.movie-container .movieBox h3 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin-bottom: 2rem;
+	padding: 20px 10px;
+	background-color: var(--color_yellow);
+	font-size: clamp(1.2rem, 4vw, 1.5rem);
+	text-transform: uppercase;
+	color: var(--color_black);
+	margin: 0 auto;
+}
+
+.movie-container .movieBox .movie-content {
+	margin-top: 6rem;
+}
+
+/* * Release-Datum */
+.movie-container .movieBox .movie-content h4 {
+	font-size: clamp(1.2rem, 4vw, 1.4rem);
+	margin: 2rem auto;
+}
+
+.movie-container .movieBox .movie-content h4:nth-of-type(2) {
+	font-size: clamp(1.125rem, 4vw, 1.5rem);
+	font-variant: small-caps;
+	font-weight: 400;
+	color: var(--color_yellow);
+}
+
+/* * Überschrift Genre */
+.movie-container .movieBox .movie-content h5 {
+	color: var(--color_green);
+	font-size: clamp(1.125rem, 4vw, 1.3rem);
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	margin: 2rem auto;
+}
+
+/* * Genre-Angaben */
+.movie-container .movieBox .movie-content .genre-text {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 10px;
+}
+
+.movie-container .movieBox .movie-content .genre-text p {
+	width: fit-content;
+	color: var(--color_white);
+}
+
+/* * Angaben über das einzelne Movie (Erscheinungsjahr, Regisseur, Spielzeit, Kategorie und Bewertung */
+.movie-container .movieBox .movie-content p {
+	width: 100%;
+	text-align: center;
+	color: var(--color_yellow);
+	font-size: clamp(1.2rem, 4vw, 1.6rem);
+	font-weight: 700;
+	margin: 1rem auto;
+}
+
+.movie-container .movieBox .movie-content p:nth-of-type(1) {
+	padding: 0 1rem;
+}
+
+@media screen and (max-width: 768px) {
+	.movie-container {
+		width: 100%;
+		padding: 0 10px;
+	}
+
+	.movie-container .movieBox {
+		width: 100%;
+	}
+}
