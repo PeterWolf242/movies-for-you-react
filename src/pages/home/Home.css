@@ -59,10 +59,16 @@
 	margin: 2rem auto;
 }
 
+/* * Highlights movie-content */
+.movie-container .movieBox .movie-content span {
+	color: var(--color_white);
+	text-transform: uppercase;
+}
+
 /* * Genre-Angaben */
 .movie-container .movieBox .movie-content .genre-text {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
 	gap: 10px;

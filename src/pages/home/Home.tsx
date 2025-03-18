@@ -40,16 +40,16 @@ export default function Home() {
 					<article key={item.title} className="movieBox">
 						<h3>{item.title}</h3>
 						<div className="movie-content">
-							<h4>{item.year}</h4>
-							<h4>{item.director}</h4>
+							<h4><span>Release Date:</span> {item.year}</h4>
+							<h4><span>Director:</span> {item.director}</h4>
 							<h5>Genres:</h5>
 							<div className="genre-text">
 								{item.genre.map((genreItem) => (
 									<p key={genreItem}>{genreItem}</p>
 								))}
 							</div>
-							<p>{item.duration}</p>
-							<p>{item.rate}</p>
+							<p><span>Playtime:</span> {item.duration}</p>
+							<p><span>Rating:</span> {item.rate}</p>
 						</div>
 					</article>
 				))}
